@@ -1,0 +1,9 @@
+C:\Users\jaxf8\Desktop\Blackjack\bin\Debug\Blackjack.exe.config
+C:\Users\jaxf8\Desktop\Blackjack\bin\Debug\Blackjack.exe
+C:\Users\jaxf8\Desktop\Blackjack\bin\Debug\Blackjack.pdb
+C:\Users\jaxf8\Desktop\Blackjack\obj\Debug\Blackjack.csprojAssemblyReference.cache
+C:\Users\jaxf8\Desktop\Blackjack\obj\Debug\Blackjack.Form1.resources
+C:\Users\jaxf8\Desktop\Blackjack\obj\Debug\Blackjack.Properties.Resources.resources
+C:\Users\jaxf8\Desktop\Blackjack\obj\Debug\Blackjack.csproj.GenerateResource.cache
+C:\Users\jaxf8\Desktop\Blackjack\obj\Debug\Blackjack.exe
+C:\Users\jaxf8\Desktop\Blackjack\obj\Debug\Blackjack.pdb
