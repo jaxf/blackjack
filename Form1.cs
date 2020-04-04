@@ -17,7 +17,7 @@ namespace Blackjack
             InitializeComponent();
         }
 
-        int total;
+        int total = 0;
         int total2;
         int total3;
         int total4;
@@ -30,8 +30,14 @@ namespace Blackjack
         int card4num;
         int card5num;
         int card6num;
+        bool lossState;
 
         Random r = new Random();
+
+        public void CheckLoss(object sender, EventArgs e)
+        {
+            
+        }
 
         private void DrawButton_Click(object sender, EventArgs e)
         {
@@ -39,7 +45,6 @@ namespace Blackjack
             if (TotalText.Text == "X")
             {
                 TotalText.Text = "0";
-                int total = 0;
             }
             if (DrawButton.Text == "Begin")
             {
@@ -51,20 +56,36 @@ namespace Blackjack
                 Card1.Text = card1num.ToString();
                 total = card1num;
                 TotalText.Text = total.ToString();
+                    if (total > 21)
+                        {
+                    System.Windows.Forms.MessageBox.Show("You lost");
+                    DrawButton.Enabled = false;
+                        }
+
             }
             if (click == 3)
             {
                 card2num = r.Next(1, 10);
                 Card2.Text = card2num.ToString();
                 total2 = card1num + card2num;
-                TotalText.Text = total2.ToString();             
+                TotalText.Text = total2.ToString();
+                    if (total2 > 21)
+                        {
+                    System.Windows.Forms.MessageBox.Show("You lost");
+                    DrawButton.Enabled = false;
+                        }
             }
             if (click == 4)
             {
                 card3num = r.Next(1, 10);
                 Card3.Text = card3num.ToString();
                 total3 = card1num + card2num + card3num;
-                TotalText.Text = total3.ToString();               
+                TotalText.Text = total3.ToString();
+                    if (total3 > 21)
+                        {
+                    System.Windows.Forms.MessageBox.Show("You lost");
+                    DrawButton.Enabled = false;
+                        }
             }
             if (click == 5)
             {
@@ -72,6 +93,11 @@ namespace Blackjack
                 Card4.Text = card4num.ToString();
                 total4 = card1num + card2num + card3num + card4num;
                 TotalText.Text = total4.ToString();
+                    if (total4 > 21)
+                        {
+                    System.Windows.Forms.MessageBox.Show("You lost");
+                    DrawButton.Enabled = false;
+                        }
             }
             if (click == 6)
             {
@@ -79,6 +105,11 @@ namespace Blackjack
                 Card5.Text = card5num.ToString();
                 total5 = card1num + card2num + card3num + card4num + card5num;
                 TotalText.Text = total5.ToString();
+                    if (total5 > 21)
+                        {
+                    System.Windows.Forms.MessageBox.Show("You lost");
+                    DrawButton.Enabled = false;
+                        }
             }
             if (click == 7)
             {
@@ -86,6 +117,16 @@ namespace Blackjack
                 Card6.Text = card6num.ToString();
                 total6 = card1num + card2num + card3num + card4num + card5num + card6num;
                 TotalText.Text = total6.ToString();
+                    if (total6 > 21)
+                        {
+                    System.Windows.Forms.MessageBox.Show("You lost");
+                    DrawButton.Enabled = false;
+                        }
+                    if (total6 < 21)
+                        {
+                    System.Windows.Forms.MessageBox.Show("You won");
+                    DrawButton.Enabled = false;
+                        }
             }
         }
     }
