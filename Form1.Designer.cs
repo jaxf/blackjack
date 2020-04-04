@@ -34,6 +34,8 @@
             this.TotalText = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ResetButton = new System.Windows.Forms.Button();
+            this.EndButton = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.Card6 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -74,7 +76,7 @@
             // DrawButton
             // 
             this.DrawButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DrawButton.Location = new System.Drawing.Point(882, 433);
+            this.DrawButton.Location = new System.Drawing.Point(918, 433);
             this.DrawButton.Name = "DrawButton";
             this.DrawButton.Size = new System.Drawing.Size(288, 151);
             this.DrawButton.TabIndex = 4;
@@ -114,6 +116,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Wheat;
+            this.panel2.Controls.Add(this.ResetButton);
+            this.panel2.Controls.Add(this.EndButton);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.panel6);
@@ -125,6 +129,27 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1298, 398);
             this.panel2.TabIndex = 0;
+            // 
+            // ResetButton
+            // 
+            this.ResetButton.Location = new System.Drawing.Point(1115, 62);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(108, 120);
+            this.ResetButton.TabIndex = 4;
+            this.ResetButton.Text = "Reset";
+            this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
+            // 
+            // EndButton
+            // 
+            this.EndButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EndButton.Location = new System.Drawing.Point(899, 62);
+            this.EndButton.Name = "EndButton";
+            this.EndButton.Size = new System.Drawing.Size(210, 117);
+            this.EndButton.TabIndex = 3;
+            this.EndButton.Text = "Stay";
+            this.EndButton.UseVisualStyleBackColor = true;
+            this.EndButton.Click += new System.EventHandler(this.EndButton_Click);
             // 
             // panel8
             // 
@@ -257,7 +282,7 @@
             this.ClientSize = new System.Drawing.Size(1234, 555);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Blackjack";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel9.ResumeLayout(false);
@@ -301,6 +326,8 @@
         private System.Windows.Forms.Label Card2;
         private System.Windows.Forms.Label TotalText;
         private System.Windows.Forms.Button DrawButton;
+        private System.Windows.Forms.Button EndButton;
+        private System.Windows.Forms.Button ResetButton;
     }
 }
 

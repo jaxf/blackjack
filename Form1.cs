@@ -30,14 +30,9 @@ namespace Blackjack
         int card4num;
         int card5num;
         int card6num;
-        bool lossState;
 
         Random r = new Random();
 
-        public void CheckLoss(object sender, EventArgs e)
-        {
-            
-        }
 
         private void DrawButton_Click(object sender, EventArgs e)
         {
@@ -63,6 +58,9 @@ namespace Blackjack
                         }
 
             }
+
+
+
             if (click == 3)
             {
                 card2num = r.Next(1, 10);
@@ -75,6 +73,9 @@ namespace Blackjack
                     DrawButton.Enabled = false;
                         }
             }
+
+
+
             if (click == 4)
             {
                 card3num = r.Next(1, 10);
@@ -87,6 +88,9 @@ namespace Blackjack
                     DrawButton.Enabled = false;
                         }
             }
+
+
+
             if (click == 5)
             {
                 card4num = r.Next(1, 10);
@@ -98,6 +102,9 @@ namespace Blackjack
                     System.Windows.Forms.MessageBox.Show("You lost");
                     DrawButton.Enabled = false;
                         }
+
+
+
             }
             if (click == 6)
             {
@@ -110,6 +117,9 @@ namespace Blackjack
                     System.Windows.Forms.MessageBox.Show("You lost");
                     DrawButton.Enabled = false;
                         }
+
+
+
             }
             if (click == 7)
             {
@@ -128,6 +138,39 @@ namespace Blackjack
                     DrawButton.Enabled = false;
                         }
             }
+        }
+
+        private void EndButton_Click(object sender, EventArgs e)
+        {
+            if (card1num + card2num + card3num + card4num + card5num + card6num < 21 || card1num + card2num + card3num + card4num + card5num + card6num > 17)
+            {
+                System.Windows.Forms.MessageBox.Show("You won, and ended game with a score of " + (card1num + card2num + card3num + card4num + card5num + card6num));
+                DrawButton.Enabled = false;
+            }
+        }
+
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+            card1num = 0;
+            card2num = 0;
+            card3num = 0;
+            card4num = 0;
+            card5num = 0;
+            card6num = 0;
+            total = 0;
+            total2 = 0;
+            total3 = 0;
+            total4 = 0;
+            total5 = 0;
+            total6 = 0;
+            TotalText.Text = "X";
+            Card1.Text = "X";
+            Card2.Text = "X";
+            Card3.Text = "X";
+            Card4.Text = "X";
+            Card5.Text = "X";
+            Card6.Text = "X";
+            DrawButton.Enabled = true;
         }
     }
 }
